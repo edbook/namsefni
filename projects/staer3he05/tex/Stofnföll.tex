@@ -1,0 +1,654 @@
+\if \kafli1
+
+\begin{skilgr}{}
+Gerum ráð fyrir því að $f$ sé fall skilgreint á $I \subseteq \mathbb{R}$. Ef til er fall $F$ sem er diffranlegt fyrir öll $x \in I$ þannig að $F'(x) = f(x)$ þá segjum við að $F$ sé \textbf{stofnfall} fyrir $f$ á $I$.
+\end{skilgr}
+
+\begin{ath}
+Þegar nöfn falla eru gefin með litlum bókstaf, t.d. $f, g, h$ o.s.frv. þá ef hefð fyrir því að notast við sambærilega stóra stafi fyrir nöfn stofnfalla þeirra, t.d. $F, G, H$ o.s.frv. Þetta er þó ekki nauðsynlegt og notast má við hvern bókstaf eða nafn á stofnfallinu sem hentar hverju sinni.
+\end{ath}
+
+\begin{ath}
+Mikilvægt er að þekkja afleiður algengustu fallanna þegar verið er að heilda, en töflu yfir þær má finna í viðauka þessa heftis.
+\end{ath}
+
+\begin{regla}{Helstu Diffrunarreglur - Upprifjun}
+Gerum ráð fyrir því að $f$ og $g$ séu diffranleg föll og að $a$ sé fasti. Þá gildir:
+\begin{itemize}
+\setlength\itemsep{5mm}
+\item[1)] $\left(f(x)+g(x)\right)' = f'(x)+g'(x)$
+
+\item[2)] $\left(af(x)\right)' = a\left(f(x)\right)'$
+
+\item[3)] $\left(f(x)g(x)\right)' = f'(x)g(x)+f(x)g'(x)$ \; (Margföldunarreglan, Leibnitz reglan)
+
+\item[4)] $\left(\dfrac{f(x)}{g(x)}\right)' = \dfrac{f'(x)g(x)-f(x)g'(x)}{g(x)^{2}}$ \hspace{3mm} (Hlutfallsreglan)
+
+\item[5)] $\left(f(g(x))\right)' = f'(g(x))g'(x)$ \hspace{18mm} (Keðjureglan)
+\end{itemize}
+\end{regla}
+
+\begin{ath}
+Fyrsta reglan hér að ofan felur í sér að sérhvert fall megi diffra lið fyrir lið, jafnvel þótt það samanstandi af fleiri en tveimur liðum.
+\end{ath}
+
+\begin{æd}
+Diffrið eftirfarandi föll.
+\begin{itemize}
+\item[a)] $F(x) = 3x^4-5x^2+2x-1$
+
+\item[b)] $G(x) = 2x^{2}\cos\left(4x-1\right)$
+
+\item[c)] $H(x) = \ln\left(3x^{2}+2\right)$
+\end{itemize}
+\end{æd}
+
+\begin{skilgr}{}
+Gerum ráð fyrir að $I \subseteq \mathbb{R}$. Við segjum að mengið $I$ sé \textbf{bil} í $\mathbb{R}$ ef fyrir öll $a,b$ í $I$ með $a < b$ gildir að ef $a < x < b$ þá er $x \in I$.
+\end{skilgr}
+
+\begin{ath}
+Óformlega má segja að mengi $I \subseteq \mathbb{R}$ nefnist bil ef það inniheldur engin ''göt''.
+\end{ath}
+
+\begin{ath}
+Hægt er að sanna að öll bil í $\mathbb{R}$ eru af einhverri af eftirfarandi gerðum:
+\begin{itemize}
+\item[1)] Takmörkuðu bilin í $\mathbb{R}$, þ.e. mengi af gerðinni $]a,b[$, $]a,b]$, $[a,b[$ og $[a,b]$ þar sem $a$ og $b$ eru rauntölur og $a < b$.
+\item[2)] Hálflínurnar í $\mathbb{R}$, þ.e. mengi af gerðinni $]-\infty,a[$, $]-\infty,a]$, $]a,\infty[$ og $[a,\infty[$ þar sem $a$ er rauntala.
+\item[3)] Mengin $\mathbb{R}$ og $\varnothing$.
+\end{itemize}
+\end{ath}
+
+\begin{ath}
+Í þessu hefti munum við alltaf gera ráð fyrir því að umrædd bil séu \textbf{ekki} $\varnothing$ nema annað sé sérstaklega tekið fram.
+\end{ath}
+
+\begin{æd}
+Rifjið upp bilritháttinn sem notast var við hér að ofan og skrifið sérhverja bilgerð (að $\mathbb{R}$ og $\varnothing$ undanskildum) með mengjarithætti.
+\end{æd}
+
+\begin{regla}{}
+Ef $f$ er fall skilgreint á bili $I \subseteq \mathbb{R}$ og $F$ og $G$ eru tvö stofnföll fyrir $f$ á $I$ þá er til tala $k \in \mathbb{R}$ þannig að $F(x) = G(x) + k$ fyrir öll $x \in I$.
+\end{regla}
+
+\begin{sonnun}
+Þar sem $F$ og $G$ eru bæði stofnföll fyrir $f$ þá fæst 
+$$
+\left(F(x)-G(x)\right)' = F'(x)-G'(x) = f(x)-f(x) = 0
+$$
+fyrir öll $x \in I$. Þar með gefur regla úr fyrri áfanga að til sé tala $k \in \mathbb{R}$ þannig að $F(x) - G(x) = k$ fyrir öll $x \in I$ og því $F(x) = G(x) + k$.
+\end{sonnun}
+
+\begin{ath}
+Talan $k$ sem kom fram í reglunni hér á undan er yfirleitt kölluð \textbf{heildisfastinn} sem fæst úr heilduninni. Hann er ætíð stak í mengi rauntalna, en við munum ekki tilgreina það sérstaklega héðan í frá.
+\end{ath}
+
+\begin{æd}
+Föllin hér að neðan hafa öll náttúrulega skilgreiningarmengið $\mathbb{R}$. Finnið öll stofnföll þeirra á því mengi.
+\begin{itemize}
+\item[a)] $f(x) = 7+3x^2-5x^5$
+
+\item[b)] $g(x) = 2\cos(3x)$
+
+\item[c)] $h(x) = 3e^{5x}$
+\end{itemize}
+\end{æd}
+
+\begin{skilgr}{}
+Við notum táknmálið
+$$
+\int f(x)\;dx
+$$
+til þess að tákna öll stofnföll fallsins $f$ og köllum þessa stærð \textbf{óeiginlega heildi} fallsins $f$.
+\end{skilgr}
+
+\begin{ath}
+Óeiginlega heildi fallsins $f$ er iðulega bara kallað heildi þess, en verknaðurinn að finna það er kallaður að heilda.
+\end{ath}
+
+\begin{regla}{Einfaldir eiginleikar heildunar}
+Gerum ráð fyrir því að $f$ og $g$ séu föll á bili $I$ og að $a$ sé fasti. Þá gildir:
+\begin{itemize}
+\item[1)] $\displaystyle \int f(x)+g(x)\; dx = \int f(x) \; dx + \int g(x) \; dx$.
+
+\item[2)] $\displaystyle \int af(x)\; dx = a\int f(x) \; dx$
+\end{itemize}
+\end{regla}
+
+\begin{ath}
+Sönnun reglunnar hér að ofan er mjög einföld afleiðing af diffrunareglunum í upphafi kaflans og er eftirlátin nemendum.
+\end{ath}
+
+\begin{regla}{(Upprifjun á nokkrum velda- og rótarreglum)}
+Eftirfarandi velda- og rótarreglur reynast gagnlegar þegar verið er að heilda:
+\begin{itemize}
+\setlength\itemsep{4mm}
+\item[1)] $\displaystyle \sqrt[n]{x} = x^{\tfrac{1}{n}}$
+
+\item[2)] $\displaystyle x^{-n} = \frac{1}{x^{n}}$
+
+\item[3)] $\displaystyle \sqrt[m]{x^{n}} = x^{\tfrac{n}{m}}$
+\end{itemize}
+\end{regla}
+
+\begin{æd}
+Reiknið eftirfarandi heildi.
+\begin{itemize}
+\item[1)] $\displaystyle \int 2x^{\tfrac{3}{5}}-5\sqrt[7]{x^{2}} \; dx$
+
+\item[2)] $\displaystyle \int \frac{3}{x^{4}}\; dx$
+\end{itemize}
+\end{æd}
+
+\begin{syn}{heildun þar sem skilgreiningarmengið er ekki bil}
+
+Finnum $\displaystyle \int f(x)\; dx$ með $f(x) = \frac{1}{x}$. Athugum sérstaklega að náttúrulegt skilgreiningarmengi $f$ er $\mathbb{R}\setminus \{0\} = ]-\infty,0[ \cup ]0,\infty[$ og því er það \textbf{ekki} bil heldur sammengi tveggja bila. Við skulum því finna stofnfall fyrir $f$ á hvoru bili fyrir sig. Byrjum á bilinu $]0,\infty[$.
+
+\vspace{2mm}
+
+Nú vitum við að $\left(\ln(x)\right)' = \frac{1}{x}$, og þar sem náttúrulegt skilgreiningarmengi $\ln$ er $]0,\infty[$ þá höfum við fundið stofnfall fyrir $f$ á því bili.
+
+\vspace{2mm}
+
+Athugum nú að fyrir $x \in ]-\infty,0[$ gildir að $-x > 0$ og því er stærðin $\ln(-x)$ skilgreind. Keðjureglan gefur nú að $\left(\ln(-x)\right)' = \frac{1}{-x}\cdot(-1) = \frac{1}{x}$ og því er $\ln(-x)$ stofnfall fyrir $f$ á bilinu $]-\infty,0[$.
+
+\vspace{2mm}
+
+Við fáum því að stofnfall fyrir $f$ á $\mathbb{R}\setminus \{0\}$ er gefið með
+$$
+F(x) = \begin{cases} \ln(x) + k_1 \;\;\;\; \text{ef} \; x > 0\\ \ln(-x) + k_2 \; \text{ef} \; x < 0\end{cases}
+$$
+Þar sem $k_1,k_2$ eru einhverjir fastar. Þetta má svo umrita 
+$$
+F(x) = \ln|x|+k(x)
+$$
+þar sem $k(x) = k_1$ ef $x > 0$ en $k(x) = k_2$ ef $x < 0$.
+
+\end{syn}
+
+\begin{ath}
+Í flestum kennslubókum stendur einfaldlega að $\displaystyle \int \frac{1}{x} \; dx = \ln|x| + k$ þar sem $k \in \mathbb{R}$. Við munum leyfa okkur að rita þetta með þessum hætti þegar verið er að heilda föll sem ekki eru skilgreind á bili.
+\end{ath}
+
+\begin{æd}
+Reiknið heildið $\displaystyle \int \frac{1}{x^{2}} \; dx$. Finnið svo stofnfall $F$ fyrir fallið $f(x) = \frac{1}{x^{2}}$ sem uppfyllir skilyrðin $F(-1) = 2$ og $F(1) = -1$ eða tilgreinið af hverju slíkt stofnfall er ekki til.
+\end{æd}
+
+\begin{regla}{Hlutheildunarregla}
+Gerum ráð fyrir því að fallið $f$ sé diffranlegt og að $g'$ sé afleiða $g$. Þá gildir að
+$$
+\int f(x)g'(x)\;dx = f(x)g(x) - \int f'(x)g(x)\;dx
+$$
+\end{regla}
+
+\begin{sonnun}
+Margföldunarreglan fyrir diffrun gefur að
+$$
+\left(f(x)g(x)\right)' = f'(x)g(x) + f(x)g'(x)
+$$
+og því fæst að
+$$
+f(x)g'(x) = \left(f(x)g(x)\right)' - f'(x)g(x)
+$$
+Heildum svo og fáum
+$$
+\int f(x)g'(x)\;dx = f(x)g(x) - \int f'(x)g(x)\;dx
+$$
+\end{sonnun}
+
+\begin{ath}
+Notkun reglunnar er með þeim hætti að notandinn velur föllin $f$ og $g'$ eftir hentugleika og notast svo við regluna. Ef föllin voru vel valin þá ætti heildið sem fæst hægra megin jafnaðarmerkisins að vera einfaldara en heildið sem byrjað var með. Einnig kemur það oft fyrir að notast þarf við hlutheildunarregluna oftar en einu sinni í sama dæminu þar til niðurstaða fæst.
+\end{ath}
+
+\begin{syn}{hlutheildun}
+Reiknum eftirfarandi heildi með því að notast við hlutheildun.
+\begin{itemize}
+\item[1)] $\displaystyle \int xe^{x} \; dx$
+
+\item[2)] $\displaystyle \int 2x\cos(x) \; dx$
+
+\item[3)] $\displaystyle \int x\ln(x) \; dx$
+\end{itemize}
+
+\vspace{2mm}
+
+{\bf Lausn:}
+
+\begin{itemize}
+\item[1)] Hér veljum við $f(x) = x$ og $g'(x) = e^{x}$. Við höfum þá að $f'(x) = 1$ og $g(x) = e^{x}$. Þar með fæst
+\begin{align*}
+\int xe^{x} \; dx = xe^{x} - \int e^{x} \; dx = xe^{x} - e^{x} + k
+\end{align*}
+
+\item[2)] Veljum $f(x) = 2x$ og $g'(x) = \cos(x)$. Við fáum þá að $f'(x) = 2$ og $g(x) = \sin(x)$. Því fáum við
+\begin{align*}
+\int 2x\cos(x) \; dx = 2x\sin(x) - \int 2\sin(x) \; dx = 2x\sin(x) + 2\cos(x) + k
+\end{align*}
+
+\item[3)] Hér er skynsamlegt að velja $f(x) = \ln(x)$ en $g'(x) = x$. Við fáum því $f'(x) = \frac{1}{x}$ og $g(x) = \frac{1}{2}x^{2}$ og þar með
+\begin{align*}
+\int x\ln(x) \; dx = \frac{1}{2}x^{2}\ln(x) - \int \frac{1}{2}x \; dx = \frac{1}{2}x^{2}\ln(x) - \frac{1}{4}x^{2} + k
+\end{align*}
+\end{itemize}
+
+\end{syn}
+
+\begin{æd}
+Reiknið eftirfarandi heildi með því að notast við hlutheildun.
+\begin{itemize}
+\item[1)] $\displaystyle \int 2x3^{x}\; dx$
+
+\item[2)] $\displaystyle \int x\sin(3x) \; dx$
+
+\item[3)] $\displaystyle \int x^{2}\ln(x)\; dx$
+\end{itemize}
+\end{æd}
+
+\begin{regla}{Innsetningarregla}
+
+Ef $F$ er stofnfall fyrir fallið $f$ og $g'$ er afleiða fallsins $g$ þá gildir að
+$$
+\int f(g(x))\cdot g'(x)\;dx = F(g(x))+k
+$$
+\end{regla}
+
+\begin{sonnun}
+Við notumst við keðjuregluna og fáum að
+$$
+\left(F(g(x))\right)' = F'(g(x))\cdot g'(x) = f(g(x))\cdot g'(x)
+$$
+
+Heildun gefur því
+$$
+\int f(g(x))\cdot g'(x) \;dx = \int \left(F(g(x))\right)' \;dx = F(g(x))+k
+$$
+\end{sonnun}
+
+\newpage
+
+\begin{ath}
+Notkun innsetningarreglunnar er með sambærilegum hætti og notkun hlutheildunarreglunnar. Við þurfum að velja föllin $f$ og $g$ með skynsamlegum hætti svo hægt sé að beyta reglunni, og í kjölfarið finna stofnfallið $F$ til þess að komast að lokasvarinu.
+\end{ath}
+
+\begin{syn}{innsetningu}
+
+Reiknið eftirfarandi heildi með því að notast við innsetningu.
+
+\begin{itemize}
+\item[1)] $\displaystyle \int 2x(x^{2}+5)^{8}\; dx$
+
+\item[2)] $\displaystyle \int 3x^{2}\cos\left(x^{3}\right)\; dx$
+
+\item[3)] $\displaystyle \int 5xe^{x^{2}}\; dx$
+\end{itemize}
+
+{\bf Lausn:}
+\begin{itemize}
+\item[1)] Ef við veljum $f(x) = x^{8}$ og $g(x) = x^{2}+5$ þá höfum við að $g'(x) = 2x$ og því $f(g(x))g'(x) = 2x(x^{2}+5)^{8}$. Þar sem $F(x) = \frac{1}{9}x^{9}$ er stofnfall fyrir $f$ þá fæst:
+$$
+\int 2x(x^{2}+5)^{8}\; dx = \frac{1}{9}(x^{2}+5)^{9} + k
+$$
+
+\item[2)] Hér getum við valið $f(x) = \cos(x)$ og $g(x) = x^{3}$. Þá er $g'(x) = 3x^{2}$ og því $f(g(x))g'(x) = 3x^{2}\cos\left(x^{3}\right)$. Höfum nú $F(x) = \sin(x)$ og fáum því:
+$$
+\int 3x^{2}\cos\left(x^{3}\right)\; dx = \sin\left(x^{3}\right) + k
+$$
+
+\item[3)] Í fljóti bragði virðist sem við getum ekki notast við innsetningarregluna hér, en við þurfum aðeins að byrja á smá umritun. Höfum að $\displaystyle \int 5xe^{x^{2}}\; dx = \frac{5}{2}\int 2xe^{x^{2}}\; dx$. Finnum nú heildið hægra megin jafnaðarmerkisins með því að notast við innsetningu. Við veljum $f(x) = e^{x}$ og $g(x) = x^{2}$. Þá er $g'(x) = 2x$ og því fæst $f(g(x))g'(x) = 2xe^{x^{2}}$. Við höfum nú $F(x) = e^{x}$ og fáum því:
+$$
+\int 5xe^{x^{2}}\; dx = \frac{5}{2}\int 2xe^{x^{2}} \; dx = \frac{5}{2}e^{x^{2}} + k
+$$
+\end{itemize}
+
+\end{syn}
+
+\newpage
+
+\begin{ath}
+Í síðasta lið dæmisins hér á undan gæti einhverjum þótt eðlilegra að skila svarinu $\displaystyle \frac{5}{2}e^{x^{2}}+\frac{5}{2}k$, en þar sem fastinn $k$ getur verið hvaða rauntala sem er þá gildir slíkt hið sama um stærðina $\frac{5}{2}k$. Því má allt eins sleppa því að margfalda $\frac{5}{2}$ með heildisfastanum.
+\end{ath}
+
+\begin{æd}
+Reiknið eftirfarandi heildi með því að notast við innsetningu.
+
+\begin{itemize}
+\item[1)] $\displaystyle \int 10x\left(5x^{2}-3\right)^{7} \; dx$
+
+\item[2)] $\displaystyle \int 4\sin\left(2x\right) \; dx$
+
+\item[3)] $\displaystyle \int \frac{2x}{x^{2}+1} \; dx$
+\end{itemize}
+\end{æd}
+
+\begin{regla}{Innsetningarregla - Gagnlegri útgáfa}
+
+Gerum ráð fyrir að $g'$ er afleiða fallsins $g$ og að $f$ sé fall. Ef við setjum $u = g(x)$ þá fæst að
+$$
+\int f(g(x))\cdot g'(x) \;dx = \int f(u)\; du
+$$
+þar sem $du = g'(x)dx$.
+\end{regla}
+
+\begin{ath}
+Þegar við höfum reiknað upp úr heildinu $\int f(u) \; du$ þá notumst við við jöfnuna $u = g(x)$ til þess að fá lokasvarið í breytunni $x$.
+\end{ath}
+
+\begin{ath}
+Í reglunni hér að ofan var notast við bókstafinn $u$ í innsetningunni, en að sjálfsögðu má notast við hvaða bókstaf sem er.
+\end{ath}
+
+\begin{syn}{innsetningu}
+Reiknið eftirfarandi heildi með því að byrja á því að notast við innsetningarregluna.
+\begin{itemize}
+\item[1)] $\displaystyle \int \frac{4}{4x-3}\; dx$
+
+\item[2)] $\displaystyle \int x\sqrt{x-1} \; dx$
+
+\item[3)] $\displaystyle \int x^{3}e^{x^{2}} \; dx$
+\end{itemize}
+
+\vspace{2mm}
+
+{\bf Lausn:}
+\begin{itemize}
+\item[1)] Setjum $u = 4x - 3$. Við höfum þá að $du = 4x\;dx$ og við fáum því
+$$
+\int \frac{4}{4x-3} \; dx = \frac{1}{u} \; du = \ln|u| + k = \ln|4x-3|+k
+$$
+
+\item[2)] Hér veljum við $u = x - 1$. Þá fæst $du = dx$ en auk þess höfum við $x = u + 1$. Við fáum því
+\setlength{\jot}{4mm}
+\begin{align*}
+&\int x\sqrt{x-1} \; dx = \int (u+1)\sqrt{u} \; du = \int u^{\tfrac{3}{2}} + u^{\tfrac{1}{2}} \; du\\ = &\frac{2}{5}u^{\tfrac{5}{2}}+\frac{2}{3}u^{\tfrac{3}{2}} + k = \frac{2}{5}\left(x-1\right)^{\tfrac{5}{2}}+\frac{2}{3}\left(x-1\right)^{\tfrac{3}{2}} + k
+\end{align*}
+
+\item[3)] Við setjum $u = x^{2}$, fáum þá að $du = 2x \; dx$ og þar með $\frac{1}{2}du = x\; dx$. Við fáum því
+$$
+\int x^{3}e^{x^{2}} \; dx = \frac{1}{2}\int u e^{u} \; du 
+$$
+Við leysum nú þetta heildi með því að notast við hlutheildun, fáum
+$$
+\frac{1}{2}\int u e^{u} \; du =  \frac{1}{2}\left(ue^{u} - \int e^{u} \; du\right) = \frac{1}{2}ue^{u}-\frac{1}{2}e^{u} + k
+$$
+og þar með
+$$
+\int x^{3}e^{x^{2}} \; dx = \frac{1}{2}x^{2}e^{x^{2}}-\frac{1}{2}e^{x^{2}} + k
+$$
+\end{itemize}
+
+\end{syn}
+
+\begin{æd}
+Reiknið eftirfarandi heildi með því að notast við innsetningarregluna.
+\begin{itemize}
+\item[1)] $\displaystyle \int \frac{3}{2-5x} \; dx$
+
+\item[2)] $\displaystyle \int 2x\sqrt{x+2}\; dx$
+
+\item[3)] $\displaystyle \int x^{3}\cos\left(2x^{2}\right)\; dx$
+\end{itemize}
+
+\end{æd}
+
+\begin{regla}{(Upprifjun á hornafallareglum)}
+Um hornaföllin $\cos$ og $\sin$ gilda eftirfarandi reglur:
+\begin{itemize}
+\item[1)] $\displaystyle \cos^{2}(x)+\sin^{2}(x) = 1$
+
+\item[2)] $\displaystyle \cos(2x) = \cos^{2}(x) - \sin^{2}(x)$
+
+\item[3)] $\displaystyle \sin(2x) = 2\sin(x)\cos(x)$
+\end{itemize}
+\end{regla}
+
+\begin{ath}
+Hornafallareglurnar hér að ofan geta oft reynst gagnlegar við heildun.
+\end{ath}
+
+
+\begin{syn}{umritun með hornafallareglum}
+Reiknið eftirfarandi heildi.
+
+\begin{itemize}
+\item[1)] $\displaystyle \int \cos^{2}(x) \; dx$
+
+\item[2)] $\displaystyle \int 4\sin(2x)\cos(2x) \; dx$
+
+\item[3)] $\displaystyle \int \cos^{3}(x) \; dx$
+\end{itemize}
+
+\vspace{2mm}
+
+{\bf Lausn:}
+
+\begin{itemize}
+\item[1)] Við höum að
+$$
+\cos(2x) = \cos^{2}(x)-\sin^{2}(x) = \cos^{2}(x) - (1-\cos^{2}(x)) = 2\cos^{2}(x)-1
+$$
+og þar með
+$$
+\cos^{2}(x) = \frac{1}{2}\cos(2x)+\frac{1}{2}
+$$
+Við fáum því
+$$
+\int \cos^{2}(x) \; dx = \int \frac{1}{2}\cos(2x)+\frac{1}{2} \; dx = \frac{1}{4}\sin(2x)+\frac{1}{2}x + k
+$$
+
+\item[2)] Setjum $u = 2x$. Þá er $du = 2x \; dx$ og við fáum því
+\setlength{\jot}{4mm}
+\begin{align*}
+&\int 4\sin(2x)\cos(2x) \; dx = \int 2\sin(u)\cos(u) \; du \\= &\int \sin(2u) \; du = -\frac{1}{2}\cos(2u) + k = -\frac{1}{4}\cos(2u) + k
+\end{align*}
+
+\item[3)] Athugum að við höfum
+$$
+\cos^{3}(x) = \cos(x)\cos^{2}(x) = \cos(x)\left(1-\sin^{2}(x)\right)
+$$
+Við setjum því $u = \sin(x)$ svo $du = \cos(x) \; dx$ og því fæst
+\begin{align*}
+&\int \cos^{3}(x) \; dx = \int \cos(x)\left(1-\sin^{2}(x)\right) \; dx = \int 1 - u^{2} \; du \\= \; &u - \frac{1}{3}u^{3} + k = \sin(x) - \frac{1}{3}\sin^{3}(x) + k
+\end{align*}
+\end{itemize}
+
+\end{syn}
+
+\begin{syn}{tvö áhugaverð heildi}
+Reiknið eftirfarandi heildi.
+\begin{itemize}
+\item[1)] $\displaystyle \int \ln(x) \; dx$
+
+\item[2)] $\displaystyle \int e^{x}\sin(x) \; dx$
+\end{itemize}
+
+\vspace{2mm}
+
+{\bf Lausn:} Í báðum þessum dæmum notumst við við sniðug ''trikk'' sem vert er að muna!
+
+\begin{itemize}
+\item[1)] Við umritum $\ln(x) = 1\cdot\ln(x)$ og notumst svo við hlutheildun. Veljum $f(x) = \ln(x)$ og $g'(x) = 1$, höfum því $f'(x) = \frac{1}{x}$ og $g(x) = x$. Fáum því:
+$$
+\int \ln(x) \; dx = x\ln(x) - \int 1 \; dx = x\ln(x) - x + k
+$$
+
+\item[2)] Hér ætlum við að notast við hlutheildun, veljum $f(x) = \sin(x)$ og $g'(x) = e^{x}$. Höfum því $f'(x) = \cos(x)$ og $g(x) = e^{x}$. Fáum því:
+$$
+\int e^{x}\sin(x) \; dx = e^{x}\sin(x) - \int e^{x}\cos(x) \; dx
+$$
+Reiknum nú síðara heildið einnig með hlutheildun, veljum $f(x) = \cos(x)$ og $g'(x) = e^{x}$. Fáum því $f'(x) = -\sin(x)$ og $g(x) = e^{x}$ og þar með
+$$
+\int e^{x}\cos(x) \; dx = e^{x}\cos(x) + \int e^{x}\sin(x) \; dx
+$$
+Ef við tökum saman útreikninga okkar þá höfum við þar með fengið
+\setlength{\jot}{4mm}
+\begin{align*}
+\int e^{x}\sin(x) \; dx &= e^{x}\sin(x) - \left(e^{x}\cos(x) + \int e^{x}\sin(x) \; dx\right)\\ &= e^{x}\sin(x)-e^{x}\cos(x)-\int e^{x}\sin(x) \; dx
+\end{align*}
+Við sjáum nú að upprunalega heildið okkar kemur fyrir beggja vegna jafnaðarmerkisins. Við getum því litið á það sem óþekkta stærð og einangrað. Fáum:
+$$
+\int e^{x}\sin(x) \; dx = \frac{e^{x}\sin(x)-e^{x}\cos(x)}{2} + k
+$$
+\end{itemize}
+
+\end{syn}
+
+\if \kafli1
+{\newpage}
+\fi
+
+\label{sec:ÆfingStofnföll}
+\subsubsection*{Æfing \ref{sec:ÆfingStofnföll}}
+\begin{adjustwidth}{-\hangingaefingar}{}
+\begin{enumerate}
+
+\item Reiknið eftirfarandi heildi.
+\begin{multicols}{2}
+\begin{enumerate}
+\setlength\itemsep{4mm}
+\item $\displaystyle \int 2x^{2}-x+3 \; dx$
+\item $\displaystyle \int -5x^{3}+2x-1 \; dx$
+\item $\displaystyle \int 3x^{2}-\sqrt{x} \; dx$
+\item $\displaystyle \int 2x^{\tfrac{1}{3}}+3x^{\tfrac{1}{2}} \; dx$
+\item $\displaystyle \int 3e^{x}-2^{x} \; dx$
+\item $\displaystyle \int e^{5x}+3^{2x} \; dx$
+\item $\displaystyle \int \sqrt{x}-\frac{1}{\sqrt{x}} \; dx$
+\item $\displaystyle \int e^{-x}+\sqrt[3]{x} \; dx$
+\item $\displaystyle \int \frac{3}{x^{2}+1} \; dx$
+\item $\displaystyle \int \frac{2}{3x} \; dx$
+\item $\displaystyle \int -\frac{\pi}{x-e} \; dx$
+\item $\displaystyle \int 3\cos(3x)-4\sin(2x) \; dx$
+\item $\displaystyle \int \frac{1}{\pi}\cos(2\pi x)+\frac{2}{\pi}\sin(\pi x) \; dx$
+\item $\displaystyle \int \frac{3}{\sqrt{1-x^{2}}} \; dx$
+\item $\displaystyle \int 1 + \tan^{2}(x) \; dx$
+\item $\displaystyle \int \frac{1}{\cos^{2}(x)} \; dx$
+\end{enumerate}
+\end{multicols}
+
+\item Reiknið heildið $\displaystyle \int f(x) \; dx$ og finnið síðan stofnfall $F$ fyrir $f$ sem uppfyllir skilyrðin $F(-1) = 1$ og $F(1) = 2$ eða útskýrið af hverju slíkt stofnfall er ekki til.
+\begin{multicols}{2}
+\begin{enumerate}
+\setlength\itemsep{4mm}
+\item $f(x) = \dfrac{1}{x}$
+\item $f(x) = 3x^{2}$
+\item $f(x) = \dfrac{2}{x^{3}}$
+\item $f(x) = \cos(\pi x)$
+\end{enumerate}
+\end{multicols}
+
+\item Notist við hlutheildun til þess að reikna eftirfarandi heildi.
+\begin{multicols}{2}
+\begin{enumerate}
+\setlength\itemsep{4mm}
+\item $\displaystyle \int xe^{3x} \; dx$
+\item $\displaystyle \int 2x\cos(3x) \; dx$
+\item $\displaystyle \int x\ln(x) \; dx$
+\item $\displaystyle \int xe^{-x} \; dx$
+\item $\displaystyle \int 3x\sin(x) \; dx$
+\item $\displaystyle \int x^{3}\ln(x) \; dx$
+\item $\displaystyle \int x^{2}\cos(x)\; dx$
+\item $\displaystyle \int x^{2}2^{-x}\; dx$
+\item $\displaystyle \int x\left(\ln(x)\right)^{2} \; dx$
+\item $\displaystyle \int \sqrt{x}\ln(x) \; dx$
+\item $\displaystyle \int x\log_{10}(x) \; dx$
+\item $\displaystyle \int \frac{\ln(x)}{x^{2}}\; dx$
+\end{enumerate}
+\end{multicols}
+
+\item Notist við innsetningu til þess að reikna eftirfarandi heildi.
+\begin{multicols}{2}
+\begin{enumerate}
+\setlength\itemsep{4mm}
+\item $\displaystyle \int 2x\left(x^{2}+1\right)^{4} \; dx$
+\item $\displaystyle \int 3x^{2}\sqrt{x^{3}+1} \; dx$
+\item $\displaystyle \int 4x\cos\left(x^{2}\right) \; dx$
+\item $\displaystyle \int 5x^{2}e^{x^{3}} \; dx$
+\item $\displaystyle \int x^{3}\left(x^{4}-2\right)^{9}\; dx$
+\item $\displaystyle \int \frac{1}{\pi}\sin\left(\pi x\right)\; dx$
+\item $\displaystyle \int 3x3^{x^{2}} \; dx$
+\item $\displaystyle \int 3x\sqrt{8-x^{2}} \; dx$
+\item $\displaystyle \int \frac{3^{\ln(x)}}{x} \; dx$
+\item $\displaystyle \int x^{5}\sqrt{x^{2}+1} \; dx$
+\item $\displaystyle \int (x^2-1)(x^3-3x+2)^{3} \; dx$
+\item $\displaystyle \int \frac{\ln(\ln(x))}{x} \; dx$
+\end{enumerate}
+\end{multicols}
+
+\item Reiknið eftirfarandi heildi.
+\begin{multicols}{2}
+\begin{enumerate}
+\setlength\itemsep{4mm}
+\item $\displaystyle \int \sin^{2}(x) \; dx$
+\item $\displaystyle \int x\cos(2\pi x)\sin(2\pi x) \; dx$
+\item $\displaystyle \int \cos^{2}(\pi x) \; dx$
+\item $\displaystyle \int \cos^{5}(x) \; dx$
+\item $\displaystyle \int 2^{x}\cos(x) \; dx$
+\item $\displaystyle \int \sqrt{x}\sin\left(\sqrt{x}\right) \; dx$ 
+\item $\displaystyle \int \cos(\ln(x)) \; dx$
+\item $\displaystyle \int \frac{5^{\ln(x)}}{x^{2}}\; dx$
+\item $\displaystyle \int \arctan(x) \; dx$
+\item $\displaystyle \int \frac{1}{e^{x}+e^{-x}} \; dx$
+\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+\end{adjustwidth}
+
+\fi
+
+\if \kafli1
+{\if \svor1 \newpage \fi}
+\fi
+
+
+\if \svor1
+\textbf{Svör við æfingu \ref{sec:ÆfingStofnföll}}
+\begin{enumerate}
+
+\item %Segið til um hvort eftirfarandi föll séu hlutleysuföll, fastaföll, veldisföll, margliður og/eða ræð föll.
+\begin{multicols}{2}
+\begin{enumerate}
+\item Fastafall og 0. stigs margliða %$f:\mathbb{R}\rightarrow\mathbb{R}$ með $f(x)=-2$
+\item Veldisfall og 2. stigs margliða %$g:\mathbb{R}\rightarrow\mathbb{R}$ með $g(x)=x^2$
+\item Hlutleysufall og 1. stigs margliða %$h:\mathbb{R}\rightarrow\mathbb{R}$ með $h(x)=x$
+\item 1. stigs margliða %$i:\mathbb{R}\rightarrow\mathbb{R}$ með $i(x)=x+1$
+\item Veldisfall $\left(x^{\frac{1}{2}}\right)$ %$j:\mathbb{R_+}\rightarrow\mathbb{R}$ með $j(x)=\sqrt{x}$
+\item Fastafall og margliða sem hefur ekkert stig %$k:\mathbb{R}\rightarrow\mathbb{R}$ með $k(x)=0$
+\item Rætt fall %$l:\mathbb{R_+}\rightarrow\mathbb{R}$ með $l(x)=\frac{x-2}{x+2}$
+\item 3. stigs margliða %$m:\mathbb{R}\rightarrow\mathbb{R}$ með $m(x)=x^3+x^2$
+\end{enumerate}
+\end{multicols}
+
+\item %Teiknið ferla þessara falla í höndum.
+\begin{multicols}{2}
+\begin{enumerate}
+\item %$f(x)=x^3$
+\begin{tikzpicture}[mynd, x=1cm, y=0.2cm, baseline=(Y.base)]
+\draw[asar] (-2.5,0) -- (2.5,0) node [xas] {$x$};
+\foreach \x in {-2,-1,1,2}
+\draw[xkvardi, shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[xkvardi] {$\x$};
+\draw[asar] (0,-15) -- (0,15) node [yas] (Y) {$y$};
+\foreach \y in {-10,-5,5,10}
+\draw[ykvardi, shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[ykvardi] {$\y$};
+\draw[ferill,domain=-2.4:2.4] plot(\x,{\x^3});
+\end{tikzpicture}
+
+\item %$g(x)=\sqrt{x}$
+\begin{tikzpicture}[mynd, x=1cm, y=1cm, baseline=(Y.base)]
+\draw[asar] (-1,0) -- (4,0) node [xas] {$x$};
+\foreach \x in {1,2,3}
+\draw[xkvardi, shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[xkvardi] {$\x$};
+\draw[asar] (0,-0.5) -- (0,2.5) node [yas] (Y) {$y$};
+\foreach \y in {1,2}
+\draw[ykvardi, shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt) node[ykvardi] {$\y$};
+\draw[ferill,domain=0:3.5] plot(\x,{sqrt(\x)});
+\end{tikzpicture}
+
+\end{enumerate}
+\end{multicols}
+
+\item Svari sleppt.
+
+\end{enumerate}
+\fi
+

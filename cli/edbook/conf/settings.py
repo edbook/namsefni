@@ -27,7 +27,7 @@ from sphinxcontrib.questionnaire import (
 # -- General configuration ------------------------------------------------
 extensions = [
     "sphinx.ext.ifconfig",
-    "sphinx.ext.intersphinx",
+    #    "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx_copybutton",
     "sphinx.ext.mathjax",
@@ -186,12 +186,12 @@ html_permalinks = True
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "_static/samstem.svg"
+html_logo = "_static/namsefni.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = "_static/samstem.ico"
+html_favicon = "_static/namsefni.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -418,8 +418,7 @@ epub_exclude_files = ["search.html"]
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {"http://docs.python.org/": None}
-
+#intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 from docutils import nodes
 from docutils.nodes import Element

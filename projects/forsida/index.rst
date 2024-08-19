@@ -1,10 +1,11 @@
 |project|
 =========
 
-Hér eru rafrænt kennsluefni opið öllum sem geta haft gagn af því.
+Hér eru rafrænt kennsluefni fyrir 
+framhaldsskóla opið öllum sem geta haft gagn af því.
 
 Umsjónarmaður síðunnar er Benedikt Steinar Magnússon <bsm@hi.is> og allt efni
-hennar er hýst á Github, https://github.com/samstem/edbook.
+hennar er hýst á Github, https://github.com/edbook/namsefni.
 
 
 
@@ -16,32 +17,8 @@ hennar er hýst á Github, https://github.com/samstem/edbook.
 
 
 .. button::
-  :text: Undirbúningur í stærðfræði
-  :link: undirbuningur_stae/index.html
-
-.. button::
-  :text: Undirbúningur í eðlisfræði
-  :link: undirbuningur_edl/index.html
-
-.. button::
-  :text: Undirbúningur í efnafræði
-  :link: undirbuningur_efn/index.html
-
-.. button::
-  :text: Heimatilraunir í eðlisfræði
-  :link: edl_heimatilraunir/index.html
-
-.. button::
-  :text: Tölfræði frá grunni
-  :link: tolfraedi_fra_grunni/index.html
-
-.. button::
-  :text: R frá grunni
-  :link: R_fra_grunni/index.html
-
-.. button::
-   :text: Fyrirlestrarnótur um Python
-   :link: https://cs.hi.is/python
+  :text: STÆR3HE05 - Heildun
+  :link: staer3he05/index.html
 
 ----------------------
 

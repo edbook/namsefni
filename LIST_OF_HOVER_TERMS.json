@@ -2740,5 +2740,29 @@
     "term": "stofnfall",
     "translation": "antiderivative, primitive",
     "word": "stofnfall"
+  },
+  {
+    "citationform": "stærðfræðigreining",
+    "term": "stærðfræðigreining",
+    "translation": "analysis, mathematical analysis",
+    "word": "stærðfræðigreiningu"
+  },
+  {
+    "citationform": "deildajafna",
+    "term": "deildajafna",
+    "translation": "differential equation",
+    "word": "afleiðujöfnur"
+  },
+  {
+    "citationform": "ferill",
+    "term": "ferill",
+    "translation": "curve, curved line, line, trajectory",
+    "word": "ferill"
+  },
+  {
+    "citationform": "vörpun",
+    "term": "vörpun",
+    "translation": "mapping, record, transform, transformation",
+    "word": "vörpun"
   }
 ]

@@ -1,0 +1,281 @@
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize \textit{#1}]%
+{\raggedright\footnotesize #1}}
+
+% -------------------------------------------------
+% Til að setja skjalið í leturgerðina GFS Artemisia
+% -------------------------------------------------
+\usepackage{gfsartemisia-euler}
+\renewcommand\familydefault{\sfdefault}
+
+\usepackage{a4wide}
+\usepackage{multicol} % Hægt að kalla á dálka inni í miðju skjali, notað t.d. í æfingum og svarkafla.
+\usepackage{subfig} % Nokkrar myndir hlið við hlið, notað í Fleygbogakaflanum
+\usepackage{comment}
+%\usepackage[margin=1.5cm]{geometry}
+
+% Tungumálapakkar
+\usepackage[utf8]{inputenc} % Nauðsynlegt fyrir íslenska stafi.
+\usepackage[T1]{fontenc}
+\usepackage[icelandic]{babel} % Íslenskt stafasett ofl. Líka fyrir línuskiptingar og slíkt.
+
+% Stærðfræðipakkar
+\usepackage{amsmath} % Nauðsynlegt fyrir t.d. align
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{polynom}
+\usepackage{cancel}
+
+
+% Ýmiskonar forsnið
+\usepackage{ulem} % Undirstrikanir
+\usepackage{setspace} % Gefur möguleika á einu og hálfu eða tvöföldu línubili
+\usepackage{pgf,tikz}
+\usepackage{pgfplots}
+\usepackage{float} % Fyrir H stika í figure
+\usetikzlibrary{arrows,positioning}
+\usetikzlibrary{shapes}
+\usetikzlibrary{shapes.callouts, decorations.text} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary{calc}                                                       % ATH. bætt við fyrir mynd í kafla um útgildi
+\usepackage[explicit]{titlesec} % Til að gera fyrirsagnir
+\usepackage{fancyhdr} % Til að gera fyrirsagnir
+\usepackage{changepage} % Til að breyta spássíu á svörum
+\usepackage{units} % Forsníður einingar
+\usepackage{etoolbox}
+\usepackage{enumerate}
+%\usepackage{ifthen}
+\usepackage{mdframed}
+
+\pgfplotsset{compat=1.12}
+
+\usepackage{rotating}
+
+\usepackage[pdftex, %
+pdfauthor={Hólmfríður Þorsteinsdóttir, Valdís Björk Þorsteinsdóttir og Jóhann Sigursteinn Björnsson}, %
+pdftitle={Heildun}%
+]{hyperref}
+
+
+
+% ----------------------------------------------------------------
+% Spássíur og bil
+% ----------------------------------------------------------------
+
+\newlength{\hanging} % Skilgreini \hanging sem hangandi spássíu, til að nota í síðari skilgreiningum
+\newlength{\hangingsvor} % Skilgreini \hanging sem hangandi spássíu, til að nota í síðari skilgreiningum
+\newlength{\hangingaefingar} % Skilgreini \hanging sem hangandi spássíu, til að nota í síðari skilgreiningum
+
+ 
+
+\setlength{\hanging}{0cm} % Breyta þessari tölu ef breyta á hangangi spássíu. Þá breytist hún allstaðar í bókinni
+\setlength{\hangingsvor}{0cm} % Breyta þessari tölu ef breyta á hangangi spássíu. Þá breytist hún allstaðar í bókinni
+\setlength{\hangingaefingar}{0cm} % Breyta þessari tölu ef breyta á hangangi spássíu. Þá breytist hún allstaðar í bókinni
+
+ 
+
+\newlength{\horn} % Skilgreini \hanging sem hangandi spássíu, til að nota í síðari skilgreiningum
+\setlength{\horn}{0.5cm} % Breyta þessari tölu ef breyta á hangangi spássíu. Þá breytist hún allstaðar í bókinni
+
+\setlength{\parskip}{10pt} % Bil milli efnisgreina
+\setlength{\parindent}{0cm} % Inndráttur fyrstu línu
+\setlength{\oddsidemargin}{\hanging} % Vinstri spássía á oddatölusíðum
+\setlength{\evensidemargin}{\hanging} % Vinstri spássía á sléttratölusíðum
+\setlength{\textwidth}{\textwidth-\hanging} % Breidd texta er stöðluð breidd texta að frádreginni hangandi spássíu
+\setlength{\textheight}{\textheight+\topmargin+\voffset+\headsep+1cm}
+\setlength{\topmargin}{0cm}
+\setlength{\voffset}{0cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\headheight}{15.2pt}
+
+%\setlength{\topmargin}{0cm}
+
+\setlength{\marginparwidth}{\hanging}
+
+\newlength{\bileftirreglu}
+\setlength{\bileftirreglu}{0.5cm}
+\newlength{\bilfyrirreglu}
+\setlength{\bilfyrirreglu}{0.5cm}
+\newlength{\bileftirsyn}
+\setlength{\bileftirsyn}{0.3cm}
+\newlength{\bilfyrirsyn}
+\setlength{\bilfyrirsyn}{0.3cm}
+
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+
+% --- Litir fyrir skjalið ------------------------------------------------
+\definecolor{reglulitur}{rgb}{0.7,1,0.7} % Grænn
+\definecolor{hreglulitur}{rgb}{1,0.65,0} % Appelsínugulur
+\definecolor{skilgrlitur}{rgb}{0.75,0.75,1} % Blár
+
+\definecolor{ljosgrar}{rgb}{0.85,0.85,0.85}
+\definecolor{dokkgrar}{rgb}{0.25,0.25,0.25}
+\definecolor{dokkgraenn}{rgb}{0,0.75,0}
+
+% --- Stílar fyrir myndir ------------------------------------------------
+\tikzstyle{mynd} = [line cap=round,line join=round,>=triangle 45, baseline={(0,0)}]
+\tikzstyle{asar} = [color=black, ->]
+\tikzstyle{xas} = [color=black, font=\footnotesize, below, anchor=north, shift={(0,-4pt)}]
+\tikzstyle{xkvardi} = [color=black, font=\footnotesize, below]
+\tikzstyle{yas} = [color=black, font=\footnotesize, left, anchor=east]
+\tikzstyle{ykvardi} = [color=black, font=\footnotesize, left]
+\tikzstyle{punktur} = [color=blue, font=\small]
+\tikzstyle{texti} = [color=black, font=\footnotesize]
+\tikzstyle{ferill} = [color=blue, smooth, samples=101]
+\tikzstyle{ferill2} = [color=dokkgraenn, smooth, samples=101]
+\tikzstyle{lina} = [color=black, smooth, samples=100]
+\tikzstyle{punktalina} = [color=gray, dashed]
+\tikzstyle{or} = [dashed, ->, color=green!70!black]
+\tikzstyle{rudur} = [color=ljosgrar,dashed, xstep=0.5cm, ystep=0.5cm]
+
+\tikzstyle{bil} = [line width=1.6pt]
+\tikzstyle{lokad} = [draw=black, fill=black]
+\tikzstyle{opid} = [draw=black, fill=white]
+\tikzstyle{rot} = [color=black, font=\footnotesize, above]
+\tikzstyle{formerki}= [color=black, font=\footnotesize, anchor=base, shift={(0,-13pt)}]
+\tikzstyle{formerki_staerd}= [color=black, font=\footnotesize, shift={(-1.3ex,-13pt)}, anchor=base west]
+\tikzstyle{formerki_staerd2}= [color=black, font=\footnotesize, shift={(-1.3ex,-26pt)}, anchor=base west]
+\tikzstyle{upp} = [color=black, font=\footnotesize, anchor=base, shift={(0,-26pt)}]
+%\tikzstyle{niður} = [color=black, font=\footnotesize, anchor=base, shift={(0,-26pt)}]
+%\tikzstyle{sveigja_u} = [color=black, font=\footnotesize, anchor=base, shift={(0,-26pt)}]
+%\tikzstyle{sveigja_n} = [color=black, font=\footnotesize, anchor=base, shift={(0,-26pt)}]
+
+\tikzstyle{texti} = [font=\footnotesize]
+\tikzstyle{form} = [fill=green!40, draw=black]
+\tikzstyle{skyring} = [fill=green!40, fill opacity=0.7]
+
+\pagestyle{fancy}
+
+\fancyhfoffset[L]{\hanging}
+
+\newcounter{regluteljari}[section]
+\renewcommand{\theregluteljari}{\thesection.\arabic{regluteljari}}
+
+\newenvironment{regla}[1]
+{\addtocounter{regluteljari}{-1}\refstepcounter{regluteljari}\par
+\begin{tikzpicture}
+\tikzstyle{regla}=[fill=reglulitur, text width=\textwidth-4ex, inner sep=2ex]
+\node[regla, anchor=north west] (0,0) \bgroup\textbf{Regla \theregluteljari\ #1}\par
+}
+{\egroup;\end{tikzpicture}\stepcounter{regluteljari}}
+
+\newenvironment{hregla}[1]
+{\addtocounter{regluteljari}{-1}\refstepcounter{regluteljari}\par
+\begin{tikzpicture}
+\tikzstyle{hregla}=[fill=hreglulitur, text width=\textwidth-4ex, inner sep=2ex]
+\node[hregla, anchor=north west] (0,0) \bgroup\textbf{Hjálparregla \theregluteljari\ #1}\par
+}
+{\egroup;\end{tikzpicture}\stepcounter{regluteljari}}
+
+\newenvironment{sonnun}
+{\textbf{Sönnun:}\linebreak}
+{\par\hfill$\blacksquare$}
+
+\newenvironment{monnun}
+{\textbf{Myndrænt:}\linebreak}
+{\par\hfill$\blacksquare$}
+
+\newenvironment{onnun}
+{\textbf{{Önnur\,\,sönnun:} \hfill}\linebreak}
+{\par\hfill$\blacksquare$}
+
+\newcounter{skilgrteljari}[section]
+\renewcommand{\theskilgrteljari}{\thesection.\arabic{skilgrteljari}}
+\newenvironment{skilgr}[1]
+{\addtocounter{skilgrteljari}{-1}\refstepcounter{skilgrteljari}\par
+\begin{tikzpicture}[remember picture]
+\tikzstyle{skilgr}=[fill=skilgrlitur, text width=\textwidth-4ex, inner sep=2ex]
+\tikzstyle{lykill}=[text width=\hanging-4ex, inner sep=2ex, text centered]
+\node[anchor=north east, lykill] (0,0) {\textit{#1}};
+\node[anchor=north west,skilgr] (0,0)\bgroup\textbf{Skilgreining \theskilgrteljari\ #1}
+\par
+}
+{\egroup;\end{tikzpicture}\stepcounter{skilgrteljari}}
+
+\newenvironment{bluebox}[1]
+{\begin{tikzpicture}[remember picture]
+\tikzstyle{bluebox}=[fill=skilgrlitur, text width=\textwidth-4ex, inner sep=2ex]
+\tikzstyle{lykill}=[text width=\hanging-4ex, inner sep=2ex, text centered]
+\node[anchor=north east, lykill] (0,0) {\textit{}};
+\node[anchor=north west,bluebox] (0,0)\bgroup\textbf{}
+\par
+}
+{\egroup;\end{tikzpicture}}
+
+\newcounter{frumsenduteljari}[section]
+\renewcommand{\thefrumsenduteljari}{\thesection.\arabic{frumsenduteljari}}
+\newenvironment{frumsenda}[1]
+{\par
+\begin{tikzpicture}[remember picture]
+\tikzstyle{frumsenda}=[fill=ljosgrar, text width=\textwidth-4ex, inner sep=2ex]
+\tikzstyle{lykill}=[text width=\hanging-4ex, inner sep=2ex, text centered]
+\node[anchor=north east, lykill] (0,0) {\textit{#1}};
+\node[anchor=north west,frumsenda] (0,0)\bgroup\textbf{Frumsenda #1}
+\par
+}
+{\egroup;\end{tikzpicture}\stepcounter{frumsenduteljari}}
+
+\newenvironment{syn}[1]
+{
+\vspace{\bilfyrirsyn}
+\hspace{-\horn}\begin{tikzpicture}%[remember picture]\hspace{-\hanging}
+\tikzstyle{horn}=[inner sep=0ex, text width=\horn] %, align=right,text width=\hanging-0ex,
+\node[anchor=north east, horn] (0,0) {\LARGE$\ulcorner$\normalsize};
+\end{tikzpicture}\textbf{Sýnidæmi um #1}
+}
+{
+\vspace{-0.3cm} %\linebreak
+\hspace{-\horn}\begin{tikzpicture}[remember picture, baseline={(0,0)}]
+\tikzstyle{horn}=[text width=\horn, inner sep=0ex] % , align= right
+\node[anchor=south east, horn] (0,0) {\LARGE$\llcorner$\normalsize};
+\end{tikzpicture}
+\vspace{\bileftirsyn}
+}
+
+
+%\newenvironment{syn}[1]
+% {\vspace{\bilfyrirsyn}\textbf{Sýnidæmi um #1}\marginpar{\hfill\LARGE$\ulcorner$\normalsize}\par}
+% {\marginpar{\hfill\vspace*{2mm}\LARGE$\llcorner$}\normalsize\vspace{\bileftirsyn}}
+
+\newenvironment{lausn}
+{\par\underline{Lausn}\par}
+{\par}
+\newenvironment{lausnb} % Lausn sem byrjar á formúlu
+{\par\underline{Lausn}}
+{\unskip}
+\newenvironment{lausne} % Lausn sem endar á formúlu
+{\par\underline{Lausn}\par}
+{\unskip\vspace{-1cm}}
+\newenvironment{lausnbe} % Lausn sem byrjar og endar á formúlu
+{\par\underline{Lausn}}
+{\unskip\vspace{-1cm}}
+
+\newenvironment{ath} % Athugasemd
+{\par\underline{Athugasemd}\par}
+{\par}
+
+\newenvironment{æd} % Æfingardæmi
+{\par\underline{Æfingardæmi}\par}
+{\par}
+
+\newcommand{\lokasvar}[1]{\underline{#1}}
+
+
+\begin{comment}
+\titleformat{\section}
+{\Large\bfseries}
+{\gdef\chapterlabel{\thesection\ }}{0pt}
+{\setcounter{regluteljari}{1}\begin{tikzpicture}[remember picture,overlay]
+\fill[gray!10] (0,0) rectangle (\textwidth+3cm,20pt);
+\node[anchor=text,rectangle,
+rounded corners=20pt,inner sep=11pt]
+{\color{blue!50!black}\chapterlabel#1};
+\end{tikzpicture}
+}
+\end{comment}
+\titlespacing*{\section}{-\hanging}{25pt}{0pt} % {Nafn titils}{Vinstra bil}{Fyrir ofan}{Fyrir neðan}
+\titlespacing*{\subsection}{-\hanging}{20pt}{5pt}
+
+\titlespacing*{\subsubsection}{-\hanging}{0pt}{0pt}

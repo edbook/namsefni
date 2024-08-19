@@ -1,0 +1,115 @@
+% Uppsetning skjalsins
+\documentclass[12pt, a4paper]{article}
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+\title{Heildun} % the document title
+
+\author{Jóhann Sigursteinn Björnsson}
+
+\date{}
+
+\input{Utlit.tex}
+\newcommand{\BBZ}{\mathbb{Z}}
+\newcommand{\BBR}{\mathbb{R}}
+\newcommand{\BBN}{\mathbb{N}}
+\newcommand{\BBC}{\mathbb{C}}
+\newcommand{\BBQ}{\mathbb{Q}}
+\newcommand{\dis}{\displaystyle}
+\DeclareMathOperator{\arccot}{arccot}
+
+%\input{Hyphenation.tex}
+
+\reversemarginpar % Setur athugasemdir Ã¡ hÃ¦gri spÃ¡ssÃ­u
+
+\selectlanguage{icelandic}
+
+%\setcounter{tocdepth}{4}
+
+\begin{document}
+
+\mbox{}
+
+\vfill
+
+\mbox{}
+
+\begin{adjustwidth}{-\hanging}{}
+\thispagestyle{empty}
+\begin{center}
+\Huge{STÆR3HE05 - Heildun}
+
+\LARGE{Náttúrufræðibraut og raungreina- og tæknibraut}\\[3ex]
+
+\Large{Menntaskólinn á Akureyri Haust 2024}
+
+\vfill
+
+\end{center}
+\end{adjustwidth}
+\mbox{}
+
+\vfill\vfill
+
+\newpage
+
+%\tableofcontents
+
+\newcommand{\kafli}{1} % 1: prenta kaflana 0: ekki prenta kaflana
+\newcommand{\svor}{1} % 1: prenta svörin 0: ekki prenta svörin
+\newcommand{\lausnir}{0} % 1: prenta lausnirnar 0: ekki prenta lausnirnar
+
+
+\section{Stofnföll og heildisreglur}
+\setcounter{regluteljari}{1}
+\setcounter{skilgrteljari}{1}
+\setcounter{subsection}{1}
+
+\input{Stofnföll.tex}
+
+\newpage
+
+\section{Eiginleg heildi}
+\setcounter{regluteljari}{1}
+\setcounter{skilgrteljari}{1}
+
+\input{Eiginleg heildi.tex}
+\newpage
+
+\section{Heildun og rúmfræði}
+
+\section{Heildunaraðferðir skoðaðar nánar}
+
+\section{Hagnýtingar heildunar}
+\setcounter{regluteljari}{1}
+
+%\input{Flatarmál.tex}
+\newpage
+%\input{Rúmmál.tex}
+\newpage
+%\input{Hagnýtingar í eðlisfræði.tex}
+\newpage
+
+%\section{Diffurjöfnur}
+%\setcounter{regluteljari}{1}
+
+%\input{1. stigs línulegar diffurjöfnur}
+\newpage
+%\input{Aðskiljanlegar diffurjönfur}
+\newpage
+%\input{Hagnýtingar diffurjafna}
+
+\renewcommand{\kafli}{0} % 1: prenta kaflana 0: ekki prenta kaflana
+\renewcommand{\svor}{1} % 1: prenta svörin 0: ekki prenta svörin
+\renewcommand{\lausnir}{0} % 1: prenta lausnirnar 0: ekki prenta lausnirnar
+
+{\Large \textbf{Svör við æfingum}}
+\setcounter{regluteljari}{1}
+\setcounter{subsection}{1}
+\input{Stofnföll.tex}
+
+
+
+
+\end{document}
